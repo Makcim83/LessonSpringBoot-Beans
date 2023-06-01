@@ -4,7 +4,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 
 public class Bus extends Transport{
 
-    @Autowired
     private String model;
 
     public Bus(String model) {

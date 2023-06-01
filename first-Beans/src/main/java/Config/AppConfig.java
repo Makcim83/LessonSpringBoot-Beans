@@ -1,9 +1,6 @@
 package Config;
 
-import model.Bus;
-import model.Car;
-import model.Driver;
-import model.Transport;
+import model.*;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -24,13 +21,24 @@ public class AppConfig {
         return new Bus("PAZ");
     }
 
+    @Bean
+    @Qualifier(value = "truck")
+    public Truck getTruckBean() {
+        return new Truck("ZIL");
+    }
+
     @Bean(name = "driver1")
     public Driver getDriver1() {
-        return new Driver("Вася" , getCarBean());
+        return new Driver("Вася", getCarBean());
     }
 
     @Bean(name = "driver2")
     public Driver getDriver2() {
         return new Driver("Петя", getBusBean());
+    }
+
+    @Bean(name = "driver3")
+    public Driver getDriver3() {
+        return new Driver("Егор", getTruckBean());
     }
 }

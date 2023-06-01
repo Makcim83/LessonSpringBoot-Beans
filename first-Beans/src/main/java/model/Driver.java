@@ -5,7 +5,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 public class Driver {
 
     private String name;
-    @Autowired
+
     private Transport transport;
 
     public Driver(String name, Transport transport) {

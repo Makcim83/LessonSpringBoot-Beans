@@ -1,12 +1,10 @@
 package model;
 
-import org.springframework.beans.factory.annotation.Autowired;
-
-public class Car extends Transport{
+public class Truck extends Transport {
 
     private String model;
 
-    public Car(String model) {
+    public Truck(String model) {
         this.model = model;
     }
 

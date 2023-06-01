@@ -21,6 +21,9 @@ public class FirstBeansApplication {
 		Driver driver2 = context.getBean("driver2", Driver.class);
 		driver2.startStatus();
 
+		Driver driver3 = context.getBean("driver3", Driver.class);
+		driver3.startStatus();
+
 		context.close();
 	}
 }
